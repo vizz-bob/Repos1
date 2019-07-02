@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fuel Mileage Calculator</title>
+    <meta charset="utf-8">
+
+    <style>
+        .body {
+            background-image: url('/Users/vijayindraasiingh/Desktop/car.jpg');
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+        .box {
+            height: 800px;
+            width: 502px;
+            background-color: #E3F2FD;
+            margin-left: 190px;
+            margin-top: 50px;
+        }
+
+        .out_box {
+            border: 1px solid black;
+            height: 800px;
+            width: 500px;
+            margin-left: 0px;
+            background-image: url(https://www.123freevectors.com/wp-content/original/116948-abstract-green-and-white-blurred-bokeh-background-design.jpg);
+        }
+
+        .fuel_box {
+            margin-top: 15px;
+            margin-left: 30px;
+            background-color: #00BCD4;
+            float: left;ƒ
+        }
+
+        .text {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .trip_box {
+            float: right;
+            margin-top: -72px;
+            margin-right: -230px;
+            background-color: #8BC34A;
+        }
+
+        .dist_box {
+            margin-top: -30px;
+            margin-left: 30px;
+            background-color: #00BCD4;
+            float: left;
+        }
+
+        .dist_tr {
+            float: right;
+            margin-top: -105px;
+            margin-right: 30px;
+            background-color: #8BC34A;
+        }
+
+        .dist_tr1 {
+            float: right;
+            height: 50px;
+            width: 200px;
+            margin-top: -85px;
+            margin-right: 30px;
+            font-size: 18px;
+        }
+
+        .fuel_box1 {
+            clear: both;
+            height: 70px;
+            width: 200px;
+            margin-top: 1px;
+            margin-left: 40px;
+            text-align: center;
+        }
+
+        .trip_box1 {
+            float: right;
+            height: 60px;
+            width: 200px;
+            margin-top: -85px;
+            margin-right: 40px;
+        }
+
+        .dist_box1 {
+            clear: both;
+            height: 70px;
+            width: 220px;
+            margin-top: -40px;
+            margin-left: 20px;
+        }
+
+        .res_box {
+            margin-left: 30px;
+            margin-top: -30px;
+        }
+
+        .clear {
+            clear: left;
+        }
+
+        #char {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #char2 {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .out_button_box1 {
+            float: left;
+            border: 1px solid black;
+            height: 45px;
+            width: 65px;
+            margin-top: 10px;
+            margin-left: 75px;
+            background-color: #A1887F;
+        }
+
+        .green_button {
+            font-size: 18px;
+            text-align: center;
+            height: 45px;
+            width: 45px;
+            background-color: #A7FFEB;
+
+        }
+
+        .grey_button {
+            font-size: 18px;
+            text-align: center;
+            height: 45px;
+            width: 45px;
+            background-color: #40C4FF;
+
+        }
+
+        .out_button_box2 {
+            float: left;
+            border: 1px solid black;
+            height: 45px;
+            width: 65px;
+            margin-top: 10px;
+            margin-left: 75px;
+            background-color: #A1887F;
+
+        }
+
+        .out_button_box4 {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 45px;
+            width: 65px;
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+
+        .out_button_box5 {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 45px;
+            width: 65px;
+            margin-left: 216px;
+            margin-top: 10px;
+            background-color: #A1887F;
+        }
+
+        .enter_box {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 40px;
+            width: 120px;
+            margin-left: 75px;
+            margin-top: -45px;
+        }
+
+        .enter_button {
+            height: 40px;
+            width: 120px;
+            background-color: #FFB74D;
+            font-size: 18px;
+        }
+
+        .entertr_box {
+            clear: both;
+            float: right;
+            border: 1px solid black;
+            height: 40px;
+            width: 120px;
+            margin-left: 200px;
+            margin-top: -45px;
+            margin-right: 73px;
+
+        }
+
+        .entertr_button {
+            height: 40px;
+            width: 120px;
+            background-color: #FFB74D;
+            margin-top: 0px;
+            font-size: 15px;
+        }
+
+        .reset_box {
+            clear: both;
+            float: left;
+            border: 1px solid black;
+            height: 40px;
+            width: 350px;
+            margin-left: 75px;
+            margin-top: 10px;
+            margin-right: 70px;
+
+        }
+
+        .reset_button {
+            height: 40px;
+            width: 350px;
+            background-color: #3F51B5;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        .secondary_divs {
+            height: 40px;
+            width: 300px;
+            float: left;
+            margin-left: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .blank_space {
+            height: 40px;
+            width: 350px;
+            margin-top: 40px;
+        }
+
+        .main_heading {
+            font-size: 18px;
+            font-weight: bold;
+            float: left;
+            height: 40px;
+            margin-top: -130px;
+            width: 100%;
+            margin-left: 15px;                                              
+        }
+        .main_heading_1 {
+            font-size: 18px;
+            font-weight: bold;
+            float: left;
+            height: 230px;
+            width: 470px;
+            margin-top: -240px;
+            margin-left: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body class="body">
+
+<div class="box">
+    <div class="out_box">
+        <div class="fuel_box">
+            <input type="numbers" id="car" class="text"
+                   style="height: 37px; background-color: #00BCD4; border: 1px solid black; width: 195px; margin-top: -2px; text-align: center;">
+        </div>
+        <div class="fuel_box1">
+            <p class="text" style="font-size: 18px;">Car</p>
+
+            <div class="trip_box">
+                <input type="numbers" id="milage" class="text"
+                       style="height: 37px; background-color: #00BCD4; border: 1px solid black; width: 195px; margin-top: -40px; text-align: center;">
+            </div>
+
+        </div>
+        <div class="trip_box1">
+            <p class="text" style="font-size: 18px;">Milage</p>
+        </div>
+        <div class="dist_box">
+            <input type="numbers" id="fuel_filled" class="text"
+                   style="height: 37px; background-color: #00BCD4; border: 1px solid black; width: 195px; margin-top: -30px; text-align: center;">
+        </div>
+        <div class="dist_box1">
+            <p class="text" style="font-size: 18px;">Fuel Filled(ltr)</p>
+        </div>
+
+        <div class="dist_tr">
+            <input type="numbers" id="distance_travelled" class="text"
+                   style="height: 37px; background-color: #00BCD4; border: 1px solid black; width: 195px; margin-top: -40px; text-align: center;">
+        </div>
+
+        <div class="dist_tr1">
+            <p class="text" style="font-size: 18px;">Distance Travelled (KM)</p>
+        </div>
+        <div class="dist_box">
+            <input type="text" id="distance_travel" class="text"
+                   style="height: 37px; background-color: #00BCD4; border: 1px solid black; width: 195px; margin-top: -30px; text-align: center;">
+        </div>
+        <div class="dist_box1">
+            <p class="text" style="font-size: 18px;">Distance you can travel (KM)</p>
+        </div>
+        
+        <div class="out_button_box1">
+            <button onclick="show_number(1)" class="green_button" id="no1">1</button>
+        </div>
+        <div class="out_button_box2">
+            <button onclick="show_number(2)" class="grey_button" id="no2">2</button>
+        </div>
+        <div class="out_button_box1">
+            <button onclick="show_number(3)" class="green_button" id="no3">3</button>
+        </div>
+        <div class="out_button_box1">
+            <button onclick="show_number(4)" class="grey_button" id="no4">4</button>
+        </div>
+        <div class="out_button_box2">
+            <button onclick="show_number(5)" class="green_button" id="no5">5</button>
+        </div>
+        <div class="out_button_box1">
+            <button onclick="show_number(6)" class="grey_button" id="no6">6</button>
+        </div>
+        <div class="out_button_box1">
+            <button onclick="show_number(7)" class="green_button" id="no7">7</button>
+        </div>
+        <div class="out_button_box2">
+            <button onclick="show_number(8)" class="grey_button" id="no8">8</button>
+        </div>
+        <div class="out_button_box2">
+            <button onclick="show_number(9)" class="green_button" id="no9">9</button>
+        </div>
+        <div class="out_button_box5">
+            <button onclick="show_number(0)" class="grey_button" id="no0">0</button>
+        </div>
+        <div class="enter_box">
+            <button class="enter_button" onclick="return enterfuel();">Enter Fuel</button>
+        </div>
+        <div class="entertr_box">
+            <button class="text entertr_button" onclick="return enterdistance();">Enter Distance</button>
+        </div>
+        <div class="reset_box">
+            <button class="text reset_button"  onclick="return reset();">Refresh</button>
+
+        </div>
+        <div class="blank_space"></div>
+
+    </div>
+    <div class="main_heading_1">
+        <&nbsp>Fuel Filled (Lt) : <br>
+        <span id="ffv"></span>
+
+    </div>
+    <div class="main_heading">
+        <&nbsp> Distance Travelled (in Kms):
+        <br>
+        <span id="dt"></span>
+    </div>
+
+</div>
+
+
+<script>
+    function show_number(no) {
+        if (no != ""){
+            var filled = document.getElementById('fuel_filled').value;
+            document.getElementById('fuel_filled').value = filled + no;
+        }
+    }
+    function enterfuel() {
+        var filled = document.getElementById('fuel_filled').value;
+        if (filled != "") {
+                var date = new Date();
+               document.getElementById('ffv').innerHTML = "<span style='width: 100%; float: left;'>Filled Fuel is :" + filled + " LTR <br>" + date+"</span>";
+           }
+           else
+               document.getElementById('ffv').innerHTML = "";
+    }
+    function enterdistance() {
+        var travelled = document.getElementById('distance_travelled').value;
+        if (travelled != "") {
+            var date = new Date();
+            document.getElementById('dt').innerHTML = "<span style='width: 100%; float: left;'>Distance you traveled :" + travelled + " KM <br>" + date+"</span>";
+            var milage = document.getElementById('milage').value;
+            var filled = document.getElementById('fuel_filled').value;
+            var travelled = document.getElementById('distance_travelled').value;
+            if (milage != "" && filled != "" && travelled != ""){
+                document.getElementById('distance_travel').value = (milage * filled) -  travelled;
+            }
+            else
+            {
+                alert('Please enter proper value with car milage, fuel filled and distance you travelled');
+                document.getElementById('distance_travel').value = "";
+            }
+        }
+        else
+        {
+            document.getElementById('dt').innerHTML = "";
+            document.getElementById('distance_travel').value = "";
+        }
+    }
+    function reset() {
+        document.getElementById('ffv').innerHTML = "";
+        document.getElementById('dt').innerHTML = "";
+        document.getElementById('car').value = "";
+        document.getElementById('milage').value = "";
+        document.getElementById('fuel_filled').value = "";
+        document.getElementById('distance_travelled').value = "";
+        document.getElementById('distance_travel').value = "";
+    }
+
+</script>
+</body>
+</html>

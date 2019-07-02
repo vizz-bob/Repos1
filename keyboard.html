@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TYPEWRITER</title>
+    <style type="text/css">
+        #display{
+            margin-top: 50px;
+            margin-left: 225px;
+            border: 5px solid black;
+            height: 80px;
+            width: 900px;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        #display_1{
+            margin-top: 20px;
+            margin-left: 200px;
+
+        }
+
+
+        .bg_black{
+            background-color: #A1887F;
+        }
+
+        .special_char{
+            font-family: sans-serif;
+            font-size: 10px;
+            text-align: left;
+            color: white;
+            margin: 5px;
+
+
+        }
+
+        .font{
+            font-family: sans-serif;
+            font-size: 12px;
+            text-align:right;
+            color: white;
+            margin: 5px;
+            font-weight: bold;
+
+        }
+
+        .design_number{
+
+            height: 60px;
+            width: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            text-align: right;
+        }
+
+        .design_char{
+            margin-left: 20px;
+            margin-top: 20px;
+            height: 60px;
+            width: 60px;
+            border: 2px solid black;
+            font-family: sans-serif;
+            font-size: 12px;
+            text-align:center;
+            color: white;
+        }
+
+        .margin_qwerty{
+            margin-left: 254px;
+            font-weight: bold;
+        }
+
+        .margin_asdf{
+            margin-left: 290px;
+            font-weight: bold;
+        }
+
+        .margin_zxcv{
+            margin-left: 340px;
+            font-weight: bold;
+        }
+
+        #space{
+            margin-top: 20px;
+            margin-left: 400px;
+            height: 60px;
+            width: 540px;
+        }
+
+        #caps{
+            margin-top: 30;
+            margin-left: 360px;
+            height: 60px;
+            width: 110px;
+            font-size: 18px;
+        }
+        #shift{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-size: 18px;
+        }
+        #passwd{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-size: 18px;
+        }
+        #clean{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-size: 18px;
+        }
+        #rev{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-size: 18px;
+            font-color:#8BC34A;
+        }
+        #caps1{
+            margin-top: 30;
+            margin-left: 30px;
+            height: 60px;
+            width: 110px;
+            font-weight: bold;
+            font-size: 18px;
+            font-color:#8BC34A;
+        }
+        #shift1{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-weight: bold;
+            font-size: 18px;
+            font-color:#8BC34A;
+        }
+        #passwd1{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-weight: bold;
+            font-size: 18px;
+            font-color:#8BC34A;
+        }
+        #clean1{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-weight: bold;
+            font-size: 18px;
+            font-color:#8BC34A;
+        }
+        #rev1{
+            margin-top: 30;
+            margin-left: 20px;
+            height: 60px;
+            width: 110px;
+            font-weight: bold;
+            font-size: 18px;
+            font-color:#8BC34A;
+        }
+    </style>
+</head>
+
+<body>
+<div id="display" input type="text" value="" ></div>
+<button id="display_1" class="bg_black font design_number" onclick="return (!shift)?dis('1'):dis('!');" value="1">!
+    <p class="special_char">1</p>
+</button>
+<button  class="bg_black font design_number" onclick="return (!shift)?dis('2'):dis('@');" value="2">@
+    <p class="special_char">2</p>
+</button>
+<button class="bg_black font design_number" onclick="return (!shift)?dis('3'):dis('#');" value="3">#
+    <p class="special_char">3</p>
+</button>
+<button class="bg_black font design_number" onclick="return (!shift)?dis('4'):dis('$');" value="4">$
+    <p class="special_char">4</p>
+</button>
+<button class="bg_black font design_number" onclick="return (!shift)?dis('5'):dis('%');" value="5">%
+    <p class="special_char">5</p>
+</button>
+<button class="bg_black font design_number" onclick="return (!shift)?dis('6'):dis('^');" value="6">^
+    <p class="special_char">6</p>
+</button>
+<button  class="bg_black font design_number" onclick="return (!shift)?dis('7'):dis('&');" value="7">&
+    <p class="special_char">7</p>
+</button>
+<button class="bg_black font design_number" onclick="return (!shift)?dis('8'):dis('*');" value="8">*
+    <p class="special_char">8</p>
+</button>
+<button  class="bg_black font design_number" onclick="return (!shift)?dis('9'):dis('(');" value="9">(
+    <p class="special_char">9</p>
+</button>
+<button  class="bg_black font design_number" onclick="return (!shift)?dis('0'):dis(')');" value="0">)
+    <p class="special_char">0</p>
+</button>
+
+<button  class="bg_black font design_number" onclick="return reset();" value="del" style="position: absolute;">
+    <p class="special_char">DEL</p>
+</button>
+
+<br>
+
+<button  class="bg_black design_char margin_qwerty" onclick="dis('q')" value="q">Q
+</button>
+<button  class="bg_black design_char " onclick="dis('w')" value="w">W
+</button>
+<button  class="bg_black design_char" onclick="dis('e')" value="e">E
+</button>
+<button  class="bg_black  design_char " onclick="dis('r')" value="r">R
+</button>
+<button  class="bg_black  design_char " onclick="dis('t')" value="t">T
+</button>
+<button  class="bg_black  design_char " onclick="dis('y')" value="y">Y
+</button>
+<button  class="bg_black  design_char " onclick="dis('u')" value="u">U
+</button>
+<button  class="bg_black  design_char " onclick="dis('i')" value="i">I
+</button>
+<button  class="bg_black  design_char " onclick="dis('o')" value="o">O
+</button>
+<button  class="bg_black  design_char " onclick="dis('p')" value="p">P
+</button>
+<br>
+<button  class="bg_black  design_char margin_asdf " onclick="dis('a')" value="a">A
+</button>
+<button  class="bg_black  design_char " onclick="dis('s')" value="s">S
+</button>
+<button  class="bg_black  design_char " onclick="dis('d')" value="d">D
+</button>
+<button  class="bg_black  design_char " onclick="dis('f')" value="f">F
+</button>
+<button  class="bg_black  design_char " onclick="dis('g')" value="g">G
+</button>
+<button  class="bg_black  design_char " onclick="dis('h')" value="h">H
+</button>
+<button  class="bg_black  design_char " onclick="dis('j')" value="j">J
+</button>
+<button  class="bg_black  design_char " onclick="dis('k')" value="k">K
+</button>
+<button  class="bg_black  design_char " onclick="dis('l')" value="l">L
+</button>
+<br>
+<button  class="bg_black  design_char margin_zxcv " onclick="dis('z')" value="z">Z
+</button>
+<button  class="bg_black  design_char " onclick="dis('x')" value="x">X
+</button>
+<button  class="bg_black  design_char " onclick="dis('c')" value="c">C
+</button>
+<button  class="bg_black  design_char " onclick="dis('v')" value="v">V
+</button>
+<button  class="bg_black  design_char " onclick="dis('b')" value="b">B
+</button>
+<button  class="bg_black  design_char " onclick="dis('n')" value="n">N
+</button>
+<button  class="bg_black  design_char " onclick="dis('m')" value="m">M
+</button>
+<button  class="bg_black  design_char " style="padding: 1px;" onclick="dis('.com')" value="l">.com
+</button>
+<button id="space"  class="bg_black " onclick="dis(' ')" value=" ">
+</button>
+
+<br>
+
+<div style="margin-left: 320px;">
+    <button id="caps1"  class=" design_char " style="padding: 1px; background-color: #E6EE9C; color: black;" onclick="return capsfn();" value="">CAPS
+    </button>
+
+    <button id="shift1"  class=" design_char " style="padding: 1px; background-color: #80CBC4; color: black;" onclick="return shiftfn()" value="">SHIFT
+    </button>
+
+    <button id="passwd1"  class=" design_char " style="padding: 1px; background-color: #7C4DFF; color: black;" onclick="return passwd();" value="">PASSWD
+    </button>
+
+    <button id="clean1"  class=" design_char " style="padding: 1px; background-color: #F48FB1; color: green;" onclick="return reset();" value="">CLEAN
+    </button>
+
+    <button id="rev1"  class=" design_char " style="padding: 1px; background-color: #CE93D8; color: green;" onclick="return reverse();" value="">REV
+    </button>
+</div>
+
+
+
+<script type="text/javascript">
+    var pass = false;
+    var caps = false;
+    var shift = false;
+    function dis(val){
+        if (!pass)
+        {
+            if (!caps) {
+                if (!shift){
+                    document.getElementById("display").innerHTML += val;
+                }
+                else
+                    document.getElementById("display").innerHTML += val.toUpperCase();
+            }
+            else
+            {
+                if (!shift){
+                    document.getElementById("display").innerHTML += val.toUpperCase();
+                }
+                else
+                    document.getElementById("display").innerHTML += val.toLowerCase();
+            }
+        }
+        else
+            document.getElementById("display").innerHTML += "*";
+    }
+    function reset() {
+        document.getElementById("display").innerHTML = "";
+    }
+    function reverse(){
+        var getval = document.getElementById('display').innerText;
+        document.getElementById('display').innerText = getval.split("").reverse().join("");
+    }
+    function passwd() {
+        if (pass)
+        {
+            pass = false;
+            document.getElementById('passwd1');
+        }
+        else{
+            pass = true;
+            document.getElementById('passwd1');
+        }
+    }
+    function capsfn() {
+        if (caps)
+        {
+            caps = false;
+            document.getElementById('caps1');
+        }
+        else{
+            caps = true;
+            document.getElementById('caps1');
+        }
+    }
+    function shiftfn() {
+        if (shift)
+        {
+            shift = false;
+            document.getElementById('shift1');
+        }
+        else{
+            shift = true;
+            document.getElementById('shift1');
+        }
+    }
+
+</script>
+</body>
+</body>
+</html>
